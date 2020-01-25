@@ -43,9 +43,11 @@ export default class Match {
 
     winner() {
         const [score1, score2] = this.players.gameScores();
+        // Game not finished yet
         if ((score1 < 6 && score2 < 6) || (score1 === 6 && score2 === 6)) {
             return null;
         }
+        // Game finished eg. 6-4 or 7-5
         if ((score1 === 6 && score1 > score2 + 1) || score1 === 7) {
             return this.players.player1;
         }

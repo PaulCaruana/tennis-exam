@@ -27,9 +27,11 @@ export default class Game extends AbstractGame {
 
     winner() {
         const [score1, score2] = this.players.scores();
+        // Game not finished
         if (score1 <= 3 && score2 <= 3) {
             return null;
         }
+        // Game finished before dueue
         if (score1 === 4 && score2 < 3) {
             return this.players.player1;
         }
