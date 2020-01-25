@@ -1,4 +1,4 @@
-import Match from "./Match";
+import Match from "../Match";
 
 test("test score for specified path", () => {
     const match = new Match("John", "Paul");

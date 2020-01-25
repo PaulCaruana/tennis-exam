@@ -1,8 +1,8 @@
-import Game from "./Game";
-import Players from "./Players";
+import Game from "../Game";
+import Players from "../Players";
 
 test("test game pointWonBy increment", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new Game(players);
     game.pointWonBy(players.player1);
     expect(players.player1.score).toBe(1);
@@ -13,7 +13,7 @@ test("test game pointWonBy increment", () => {
 });
 
 test("test game score", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new Game(players);
     expect(game.score()).toBe("0-0");
     game.pointWonBy(players.player1);
@@ -43,7 +43,7 @@ test("test game score", () => {
 });
 
 test("test game winner", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new Game(players);
     game.pointWonBy(players.player1);
     expect(game.isFinished()).toBe(false);
@@ -56,7 +56,7 @@ test("test game winner", () => {
 });
 
 test("test game winner2", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new Game(players);
     game.pointWonBy(players.player1);
     game.pointWonBy(players.player1);
@@ -69,4 +69,3 @@ test("test game winner2", () => {
     game.pointWonBy(players.player2);
     expect(game.winner()).toBe(1);
 });
-

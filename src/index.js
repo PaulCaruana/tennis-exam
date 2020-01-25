@@ -25,4 +25,3 @@ console.log(match.score());
 match.pointWonBy("player 1");
 // this will return "1-0"
 console.log(match.score());
-

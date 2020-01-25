@@ -13,10 +13,12 @@ export default class AbstractGame {
         player.addPoint();
     }
 
+    // eslint-disable-next-line class-methods-use-this
     score() {
         throw "Abstract class";
     }
 
+    // eslint-disable-next-line class-methods-use-this
     winner() {
         throw "Abstract class";
     }

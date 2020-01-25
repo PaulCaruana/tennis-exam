@@ -4,7 +4,7 @@ import Players from "./Players";
 
 export default class Match {
     constructor(name1, name2) {
-        this.players = new Players(name1, name2)
+        this.players = new Players(name1, name2);
         this.currentGame = new Game(this.players);
     }
 

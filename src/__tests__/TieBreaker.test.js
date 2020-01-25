@@ -1,10 +1,9 @@
-import TieBreaker from "./TieBreaker";
-import Player from "./Player";
-import Players from "./Players";
+import TieBreaker from "../TieBreaker";
+import Players from "../Players";
 
 
 test("test game pointWonBy increment", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new TieBreaker(players);
     game.pointWonBy(players.player1);
     expect(players.player1.score).toBe(1);
@@ -15,7 +14,7 @@ test("test game pointWonBy increment", () => {
 });
 
 test("test game score", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new TieBreaker(players);
     expect(game.score()).toBe("0-0");
     game.pointWonBy(players.player1);
@@ -41,7 +40,7 @@ test("test game score", () => {
 });
 
 test("test game winner", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new TieBreaker(players);
     game.pointWonBy(players.player1);
     game.pointWonBy(players.player1);
@@ -63,7 +62,7 @@ test("test game winner", () => {
     expect(game.isFinished()).toBe(true);
 });
 test("test game winner2", () => {
-    const players = new Players("John", "Paul")
+    const players = new Players("John", "Paul");
     const game = new TieBreaker(players);
     game.pointWonBy(players.player1);
     game.pointWonBy(players.player1);
@@ -84,4 +83,3 @@ test("test game winner2", () => {
     expect(game.winner()).toBe(0);
     expect(game.isFinished()).toBe(true);
 });
-
