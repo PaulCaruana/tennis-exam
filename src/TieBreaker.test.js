@@ -1,4 +1,4 @@
-import TieBreaker from "./TieBreakerO";
+import TieBreaker from "./TieBreaker";
 import Player from "./Player";
 import Players from "./Players";
 

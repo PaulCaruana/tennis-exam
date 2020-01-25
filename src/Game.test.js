@@ -1,4 +1,4 @@
-import Game from "./GameO";
+import Game from "./Game";
 import Players from "./Players";
 
 test("test game pointWonBy increment", () => {

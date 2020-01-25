@@ -15,7 +15,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "start": "node src/index.js",
+    "start": "babel-node src/index.js",
     "test": "jest"
   }
 }

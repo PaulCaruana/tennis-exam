@@ -1,5 +1,5 @@
-import Game from "./GameO";
-import TieBreaker from "./TieBreakerO";
+import Game from "./Game";
+import TieBreaker from "./TieBreaker";
 import Players from "./Players";
 
 export default class Match {

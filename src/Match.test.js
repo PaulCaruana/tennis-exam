@@ -1,7 +1,7 @@
-const Match = require("./match");
+import Match from "./Match";
 
 test("test score for specified path", () => {
-    const match = Match("John", "Paul");
+    const match = new Match("John", "Paul");
     match.pointWonBy("John");
 
     match.pointWonBy("Paul");
@@ -23,9 +23,9 @@ test("test score for specified path", () => {
 });
 
 test("test match finished score for tie breaker", () => {
-    const match = Match("John", "Paul");
-    match.currentScore[0] = 5;
-    match.currentScore[1] = 6;
+    const match = new Match("John", "Paul");
+    match.players.player1.gameScore = 5;
+    match.players.player2.gameScore = 6;
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
@@ -55,9 +55,9 @@ test("test match finished score for tie breaker", () => {
 
 
 test("test match finished for normal set", () => {
-    const match = Match("John", "Paul");
-    match.currentScore[0] = 5;
-    match.currentScore[1] = 4;
+    const match = new Match("John", "Paul");
+    match.players.player1.gameScore = 5;
+    match.players.player2.gameScore = 4;
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
@@ -68,9 +68,9 @@ test("test match finished for normal set", () => {
 });
 
 test("test match finished with 7-5 set", () => {
-    const match = Match("John", "Paul");
-    match.currentScore[0] = 6;
-    match.currentScore[1] = 5;
+    const match = new Match("John", "Paul");
+    match.players.player1.gameScore = 6;
+    match.players.player2.gameScore = 5;
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
@@ -81,9 +81,9 @@ test("test match finished with 7-5 set", () => {
 });
 
 test("test match finished for tie breaker", () => {
-    const match = Match("John", "Paul");
-    match.currentScore[0] = 5;
-    match.currentScore[1] = 6;
+    const match = new Match("John", "Paul");
+    match.players.player1.gameScore = 5;
+    match.players.player2.gameScore = 6;
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
