@@ -24,8 +24,8 @@ test("test score for specified path", () => {
 
 test("test match finished score for tie breaker", () => {
     const match = new Match("John", "Paul");
-    match.players.player1.gameScore = 5;
-    match.players.player2.gameScore = 6;
+    match.getPlayers().getPlayer1().setGameScore(5);
+    match.getPlayers().getPlayer2().setGameScore(6);
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
@@ -56,8 +56,8 @@ test("test match finished score for tie breaker", () => {
 
 test("test match finished for normal set", () => {
     const match = new Match("John", "Paul");
-    match.players.player1.gameScore = 5;
-    match.players.player2.gameScore = 4;
+    match.getPlayers().getPlayer1().setGameScore(5);
+    match.getPlayers().getPlayer2().setGameScore(4);
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
@@ -69,8 +69,8 @@ test("test match finished for normal set", () => {
 
 test("test match finished with 7-5 set", () => {
     const match = new Match("John", "Paul");
-    match.players.player1.gameScore = 6;
-    match.players.player2.gameScore = 5;
+    match.getPlayers().getPlayer1().setGameScore(6);
+    match.getPlayers().getPlayer2().setGameScore(5);
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");
@@ -82,8 +82,8 @@ test("test match finished with 7-5 set", () => {
 
 test("test match finished for tie breaker", () => {
     const match = new Match("John", "Paul");
-    match.players.player1.gameScore = 5;
-    match.players.player2.gameScore = 6;
+    match.getPlayers().getPlayer1().setGameScore(5);
+    match.getPlayers().getPlayer2().setGameScore(6);
     match.pointWonBy("John");
     match.pointWonBy("John");
     match.pointWonBy("John");

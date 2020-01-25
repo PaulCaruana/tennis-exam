@@ -10,6 +10,14 @@ export default class Players {
         };
     }
 
+    getPlayer1() {
+        return this.player1;
+    }
+
+    getPlayer2() {
+        return this.player2;
+    }
+
     scores() {
         return [this.player1.score, this.player2.score];
     }

@@ -5,6 +5,18 @@ export default class Player {
         this.name = name;
     }
 
+    getScore() {
+        return this.score;
+    }
+
+    getGameScore() {
+        return this.gameScore;
+    }
+
+    setGameScore(gameScore) {
+        this.gameScore = gameScore;
+    }
+
     addPoint() {
         this.score++;
     }

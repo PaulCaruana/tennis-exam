@@ -54,4 +54,9 @@ export default class Match {
     isMatchFinished() {
         return this.winner() !== null;
     }
+
+    getPlayers() {
+        return this.players;
+    }
+
 }
