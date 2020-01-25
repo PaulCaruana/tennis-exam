@@ -1,6 +1,6 @@
-const Game = require('./game');
+const Game = require("./game");
 
-test('test game point increment', () => {
+test("test game point increment", () => {
     const game = Game();
     game.point(0);
     expect(game.currentScore).toEqual([1,0]);
@@ -8,7 +8,7 @@ test('test game point increment', () => {
     expect(game.currentScore).toEqual([1,1]);
 });
 
-test('test game score', () => {
+test("test game score", () => {
     const game = Game("John", "Paul");
     expect(game.score()).toBe("0-0");
     game.point(0)
@@ -37,7 +37,7 @@ test('test game score', () => {
     expect(game.score()).toBe("");
 });
 
-test('test game winner', () => {
+test("test game winner", () => {
     const game = Game("John", "Paul");
     game.point(0)
     expect(game.isFinished()).toBe(false);

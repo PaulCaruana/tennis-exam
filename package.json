@@ -1,15 +1,19 @@
 {
-  "name": "zombie",
+  "name": "tennis",
   "version": "4.4.0",
-  "description": "Zombie Apocalypse v4.4 Grid Game",
+  "description": "Tennis tournament. To aid with this, we're developing a scoring system",
   "private": true,
   "author": "Paul Caruana",
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
     "jest": "^23.5.0"
   },
   "dependencies": {},
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest --watch"
+    "test": "jest",
+    "lint": "eslint"
   }
 }

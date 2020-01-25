@@ -1,8 +1,8 @@
-const Game = require('./game');
-const TieBreaker = require('./tieBreaker');
+const Game = require("./game");
+const TieBreaker = require("./tieBreaker");
 
 function Match(player1, player2) {
-    const players = [player1, player2]
+    const players = [player1, player2];
     const currentScore = [0, 0];
     let currentGame = Game(player1, player2);
 
@@ -22,7 +22,7 @@ function Match(player1, player2) {
     const createNewGame = () => {
         const [score1, score2] = currentScore;
         if (score1 === 6 && score2 === 6) {
-           return TieBreaker();
+            return TieBreaker();
         }
         return Game(player1, player2);
     };
@@ -37,15 +37,14 @@ function Match(player1, player2) {
 
     const winner = () => {
         const [score1, score2] = currentScore;
-        //console.log(score1, score2)
-        if (score1 < 6 && score2 < 6 || score1 === 6 && score2 === 6) {
+        if ((score1 < 6 && score2 < 6) || (score1 === 6 && score2 === 6)) {
             return -1;
         }
-        if (score1 === 6 && score1 > score2 + 1 || score1 === 7) {
-            return 0
+        if ((score1 === 6 && score1 > score2 + 1) || score1 === 7) {
+            return 0;
         }
-        if (score2 === 6 && score2 > score1 + 1 || score2 === 7) {
-            return 1
+        if ((score2 === 6 && score2 > score1 + 1) || score2 === 7) {
+            return 1;
         }
         return -1;
     }

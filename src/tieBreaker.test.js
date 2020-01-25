@@ -1,6 +1,6 @@
-const TieBreaker = require('./tieBreaker');
+const TieBreaker = require("./tieBreaker");
 
-test('test game point increment', () => {
+test("test game point increment", () => {
     const game = TieBreaker();
     game.point(0);
     expect(game.currentScore).toEqual([1,0]);
@@ -8,7 +8,7 @@ test('test game point increment', () => {
     expect(game.currentScore).toEqual([1,1]);
 });
 
-test('test game score', () => {
+test("test game score", () => {
     const game = TieBreaker();
     expect(game.score()).toBe("0-0");
     game.point(0);
@@ -33,7 +33,7 @@ test('test game score', () => {
     expect(game.score()).toBe("");
 });
 
-test('test game winner', () => {
+test("test game winner", () => {
     const game = TieBreaker();
     game.point(0)
     game.point(0)
@@ -54,7 +54,7 @@ test('test game winner', () => {
     expect(game.winner()).toBe(1);
     expect(game.isFinished()).toBe(true);
 });
-test('test game winner2', () => {
+test("test game winner2", () => {
     const game = TieBreaker();
     game.point(0)
     game.point(0)
