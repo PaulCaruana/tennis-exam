@@ -58,7 +58,7 @@ test("test game winner", () => {
     game.pointWonBy(players.player2);
     expect(game.isFinished()).toBe(false);
     game.pointWonBy(players.player2);
-    expect(game.winner()).toBe(1);
+    expect(game.winner()).toBe(players.player2);
     expect(game.isFinished()).toBe(true);
 });
 test("test game winner2", () => {
@@ -80,6 +80,6 @@ test("test game winner2", () => {
     game.pointWonBy(players.player1);
     expect(game.isFinished()).toBe(false);
     game.pointWonBy(players.player1);
-    expect(game.winner()).toBe(0);
+    expect(game.winner()).toBe(players.player1);
     expect(game.isFinished()).toBe(true);
 });

@@ -12,14 +12,14 @@ export default class Game extends AbstractGame {
     winner() {
         const [score1, score2] = this.players.scores();
         if (score1 <= 6 && score2 <= 6) {
-            return -1;
+            return null;
         }
         if (score1 >= 7 && score1 > score2 + 1) {
-            return 0;
+            return this.players.player1;
         }
         if (score2 >= 7 && score2 > score1 + 1) {
-            return 1;
+            return this.players.player2;
         }
-        return -1;
+        return null;
     }
 }

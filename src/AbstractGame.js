@@ -24,6 +24,6 @@ export default class AbstractGame {
     }
 
     isFinished() {
-        return this.winner() > -1;
+        return (this.winner() !== null);
     }
 }

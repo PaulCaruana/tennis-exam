@@ -64,7 +64,7 @@ test("test match finished for normal set", () => {
     expect(match.isMatchFinished()).toBe(false);
     match.pointWonBy("John");
     expect(match.isMatchFinished()).toBe(true);
-    expect(match.winner()).toBe(0);
+    expect(match.winner()).toBe(match.players.player1);
 });
 
 test("test match finished with 7-5 set", () => {
@@ -77,7 +77,7 @@ test("test match finished with 7-5 set", () => {
     expect(match.isMatchFinished()).toBe(false);
     match.pointWonBy("John");
     expect(match.isMatchFinished()).toBe(true);
-    expect(match.winner()).toBe(0);
+    expect(match.winner()).toBe(match.players.player1);
 });
 
 test("test match finished for tie breaker", () => {
@@ -97,5 +97,5 @@ test("test match finished for tie breaker", () => {
     expect(match.isMatchFinished()).toBe(false);
     match.pointWonBy("Paul");
     expect(match.isMatchFinished()).toBe(true);
-    expect(match.winner()).toBe(1);
+    expect(match.winner()).toBe(match.players.player2);
 });

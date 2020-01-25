@@ -28,21 +28,21 @@ export default class Game extends AbstractGame {
     winner() {
         const [score1, score2] = this.players.scores();
         if (score1 <= 3 && score2 <= 3) {
-            return -1;
+            return null;
         }
         if (score1 === 4 && score2 < 3) {
-            return 0;
+            return this.players.player1;
         }
         if (score2 === 4 && score1 < 3) {
-            return 1;
+            return this.players.player2;
         }
         // Margin of 2 after dueue
         if (score1 > score2 + 1) {
-            return 0;
+            return this.players.player1;
         }
         if (score2 > score1 + 1) {
-            return 1;
+            return this.players.player2;
         }
-        return -1;
+        return null;
     }
 }

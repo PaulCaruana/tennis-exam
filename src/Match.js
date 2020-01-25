@@ -40,18 +40,18 @@ export default class Match {
     winner() {
         const [score1, score2] = this.players.gameScores();
         if ((score1 < 6 && score2 < 6) || (score1 === 6 && score2 === 6)) {
-            return -1;
+            return null;
         }
         if ((score1 === 6 && score1 > score2 + 1) || score1 === 7) {
-            return 0;
+            return this.players.player1;
         }
         if ((score2 === 6 && score2 > score1 + 1) || score2 === 7) {
-            return 1;
+            return this.players.player2;
         }
-        return -1;
+        return null;
     }
 
     isMatchFinished() {
-        return this.winner() > -1;
+        return this.winner() !== null;
     }
 }
