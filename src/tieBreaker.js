@@ -1,5 +1,5 @@
+// TODO: Convert this a to a ES6 Class with abstract class
 function TieBreaker() {
-
     const currentScore = [0, 0];
     let started = false;
 
@@ -24,10 +24,10 @@ function TieBreaker() {
             return -1;
         }
         if (score1 >= 7 && score1 > score2 + 1) {
-            return 0
+            return 0;
         }
         if (score2 >= 7 && score2 > score1 + 1) {
-            return 1
+            return 1;
         }
         return -1;
     }
@@ -35,8 +35,6 @@ function TieBreaker() {
 
     return {
         currentScore, point, score, winner, isFinished, hasStarted
-    }
-
+    };
 }
-
 module.exports = TieBreaker;

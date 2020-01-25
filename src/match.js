@@ -52,6 +52,6 @@ function Match(player1, player2) {
 
     return {
         currentScore, pointWonBy, score, winner, isMatchFinished
-    }
+    };
 }
 module.exports = Match;

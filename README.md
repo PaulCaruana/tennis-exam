@@ -1,6 +1,4 @@
-# Project Title
-
-Coding Test
+# Tennis Coding Test
 
 ## Description
 

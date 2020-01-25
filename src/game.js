@@ -1,3 +1,4 @@
+// TODO: Convert this a to a ES6 Class with abstract class
 function Game(player1, player2) {
     const currentScore = [0, 0];
     const TENNIS_SCORES = ["0", "15", "30", "40"];
