@@ -2,6 +2,10 @@ import Game from "./Game";
 import TieBreaker from "./TieBreaker";
 import Players from "./Players";
 
+/**
+ * Please note: No Tennis Set has been included as requirements state
+ * that match only contains a single set
+ */
 export default class Match {
     constructor(name1, name2) {
         this.players = new Players(name1, name2);
