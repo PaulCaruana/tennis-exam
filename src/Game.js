@@ -33,17 +33,17 @@ export default class Game extends AbstractGame {
         }
         // Game finished before dueue
         if (score1 === 4 && score2 < 3) {
-            return this.players.player1;
+            return this.players.getPlayer1();
         }
         if (score2 === 4 && score1 < 3) {
-            return this.players.player2;
+            return this.players.getPlayer2();
         }
         // Margin of 2 after dueue
         if (score1 > score2 + 1) {
-            return this.players.player1;
+            return this.players.getPlayer1();
         }
         if (score2 > score1 + 1) {
-            return this.players.player2;
+            return this.players.getPlayer2();
         }
         return null;
     }

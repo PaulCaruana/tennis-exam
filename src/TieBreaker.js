@@ -15,10 +15,10 @@ export default class Game extends AbstractGame {
             return null;
         }
         if (score1 >= 7 && score1 > score2 + 1) {
-            return this.players.player1;
+            return this.players.getPlayer1();
         }
         if (score2 >= 7 && score2 > score1 + 1) {
-            return this.players.player2;
+            return this.players.getPlayer2();
         }
         return null;
     }

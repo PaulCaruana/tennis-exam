@@ -49,10 +49,10 @@ export default class Match {
         }
         // Game finished eg. 6-4 or 7-5
         if ((score1 === 6 && score1 > score2 + 1) || score1 === 7) {
-            return this.players.player1;
+            return this.players.getPlayer1();
         }
         if ((score2 === 6 && score2 > score1 + 1) || score2 === 7) {
-            return this.players.player2;
+            return this.players.getPlayer2();
         }
         return null;
     }
