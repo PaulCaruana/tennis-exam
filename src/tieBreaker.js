@@ -34,7 +34,7 @@ function TieBreaker() {
     const isFinished = () => (winner() > -1);
 
     return {
-        currentScore, point, score, winner, isFinished, hasStarted
+        currentScore, point, score, winner, isFinished, hasStarted,
     };
 }
 module.exports = TieBreaker;

@@ -1,6 +1,7 @@
 const Game = require("./game");
 const TieBreaker = require("./tieBreaker");
 
+// Note: To keep things simple I have not included a Set function
 function Match(player1, player2) {
     const players = [player1, player2];
     const currentScore = [0, 0];
@@ -47,11 +48,13 @@ function Match(player1, player2) {
             return 1;
         }
         return -1;
-    }
+    };
+
     const isMatchFinished = () => (winner() > -1);
 
     return {
-        currentScore, pointWonBy, score, winner, isMatchFinished
+        currentScore, pointWonBy, score, winner, isMatchFinished,
     };
 }
+
 module.exports = Match;
