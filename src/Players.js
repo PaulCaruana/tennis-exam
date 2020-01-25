@@ -18,7 +18,7 @@ export default class Players {
         return [this.player1.gameScore, this.player2.gameScore];
     }
 
-    findPlayByName(name) {
+    findPlayerByName(name) {
         return this.players[name];
     }
 

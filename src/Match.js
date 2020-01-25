@@ -12,7 +12,7 @@ export default class Match {
         if (this.isMatchFinished()) {
             return;
         }
-        const player = this.players.findPlayByName(playerName);
+        const player = this.players.findPlayerByName(playerName);
         this.currentGame.pointWonBy(player);
 
         if (this.currentGame.isFinished()) {
