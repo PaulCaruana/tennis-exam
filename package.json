@@ -1,0 +1,15 @@
+{
+  "name": "zombie",
+  "version": "4.4.0",
+  "description": "Zombie Apocalypse v4.4 Grid Game",
+  "private": true,
+  "author": "Paul Caruana",
+  "devDependencies": {
+    "jest": "^23.5.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --watch"
+  }
+}
